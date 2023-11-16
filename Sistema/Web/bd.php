@@ -5,7 +5,7 @@
     if ($_POST['email'] == $_POST['conf'] AND $_POST['senha'] == $_POST['confsenha']) {
         
         /* CONEXÃO COM O BANCO DE DADOS */
-        $pdo = new PDO('mysql:host=localhost;dbname=exemplo','root','');
+        $pdo = new PDO('mysql:host=localhost;dbname=dentista','root','');
 
         /* PREPARAÇÃO PARA A GRAVAÇÃO */
         $sql = $pdo->prepare("INSERT INTO `usuarios` VALUES (null,?,?,?,?,?,?,?,?,?,?,?,?)");
@@ -22,7 +22,7 @@
                             $_POST['datanasc'],
                             $_POST['email'],
                             $_POST['senha'],
-                            'vazio'                      
+                                                  
         ));
 
         //echo "Dados iguais!!";
